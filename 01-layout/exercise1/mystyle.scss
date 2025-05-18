@@ -1,12 +1,11 @@
 @use "_base" as *;
-@use "sass:map" as map;
 
 .root {
   @extend .flex-style;
   flex-direction: column;
 }
 
-// create three containers with different background colors
+// create containers with different background colors
 // and a base color for each container
 @include container-palette();
 

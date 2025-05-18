@@ -8,7 +8,7 @@ Create a dynamic palette of colors similar to the above image.
 
 ![Dynamic Palette](./assets/dynamic-palette.png)
 
-Using the following **html**
+Using the following **html** as a reference
 
 ```html
 <div class="container-1"> 
@@ -26,3 +26,18 @@ Using the following **html**
 ```
 
 Review the [Readme](./exercise1/Readme.md) to see the instructions to run this exercise.
+
+## Execise 2
+
+Create a html page with *theme* support for some properties:
+
+ - Color
+ - Font
+ - Border Radious
+ - Shadow box
+
+ ![alt text](./assets/theme.png)
+
+ > The theme can be changed modifying the source code not dynamically changed with js or any other method.
+
+ Review the [Readme](./exercise2/Readme.md) to see the instructions to run this exercise.

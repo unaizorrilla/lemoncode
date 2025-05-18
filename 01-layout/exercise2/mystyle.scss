@@ -1,0 +1,48 @@
+@import url('./secondary-theme.css');
+
+.root{
+    display:flex;
+    flex-direction:column;
+    gap:1px;
+}
+
+.text{
+    padding:20px;
+    font-size: large;
+    font-style: bold;
+}
+
+.box{
+    @extend .text;
+    display: flex;
+    justify-content: left;
+    align-items:start;
+    
+    width: 100px;
+    height: 100px;
+    margin: 1px;
+}
+
+.base {
+    background-color: var(--base-background-color);
+}
+.important {
+    background-color: var(--important-background-color);
+}
+.warning {
+    background-color: var(--warning-background-color);
+}
+
+.shadow {
+    box-shadow:var(--box-shadow);
+}
+
+.main-text{
+    font-family: var(--main-font);
+    padding: 5px;
+}
+
+.secondary-text{
+    font-family: var(--secondary-font);
+    padding: 5px;
+}

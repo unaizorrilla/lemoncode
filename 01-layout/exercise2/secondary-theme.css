@@ -1,0 +1,8 @@
+:root{
+    --base-background-color:hwb(247 4% 11%);
+    --warning-background-color:#0e043e;
+    --important-background-color:#0fc4e0;
+     --main-font: 'Arial', serif;
+    --secondary-font: 'verdana', cursive;
+    --box-shadow: 10px 10px 10px 4px rgba(0, 0, 0, 0.9);
+}
