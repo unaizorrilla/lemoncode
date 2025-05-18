@@ -1,0 +1,74 @@
+@use "sass:color" as color;
+@use "sass:map" as map;
+
+/*
+We define a master color palette for each three containers and master font color
+*/
+
+$master-color-palette: (
+  1: #c80001,
+  2: #0000d8,
+  3: #00d801,
+);
+
+$master-font-color: #ffffff;
+
+/*
+We define a scale color function using a base color and percentage
+*/
+
+@function scale-color($base-color, $percentage, $direction: 1) {
+  @return color.scale($base-color, $lightness: $percentage*$direction);
+}
+
+/*
+Define the palette
+*/
+
+.flex-style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin container-palette() {
+
+  $i: 1;
+
+  @while $i <=3 {
+    .container-#{$i} {
+      @extend .flex-style;
+      gap: 5px;
+      & .box {
+        @extend .flex-style;
+        width: 100px;
+        height: 100px;
+        background-color: map.get($master-color-palette, $i);
+        border-radius: 5px;
+        margin: 10px;
+
+        @for $j from 1 through 4 {
+          &.darken-#{$j} {
+            background-color: scale-color($base-color: map.get($master-color-palette, $i), $percentage: 10% * $j, $direction: -1);
+          }
+
+          &.lighten-#{$j} {
+            background-color: scale-color($base-color: map.get($master-color-palette, $i), $percentage: 10% * $j, $direction: 1);
+          }
+
+          & .color-box-text {
+            color: scale-color($master-font-color, $percentage: 10% * $j, $direction: 1);
+          }
+        }
+
+      }
+
+      & .base-color {
+        width: 140px;
+      }
+
+    }
+
+    $i: $i + 1;
+  }
+}
