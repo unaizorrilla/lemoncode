@@ -38,6 +38,6 @@ Create a html page with *theme* support for some properties:
 
  ![alt text](./assets/theme.png)
 
- > The theme can be changed modifying the source code not dynamically changed with js or any other method.
+ > The theme can be changed modifying the source code, not dynamically changed with js or any other method.
 
  Review the [Readme](./exercise2/Readme.md) to see the instructions to run this exercise.

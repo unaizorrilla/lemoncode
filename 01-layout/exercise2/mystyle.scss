@@ -1,48 +1,59 @@
-@import url('./secondary-theme.css');
+@import url('./main-theme.css');
 
-.root{
-    display:flex;
-    flex-direction:column;
-    gap:1px;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.text{
-    padding:20px;
+.root {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.text {
+    padding: 20px;
     font-size: large;
-    font-style: bold;
+    font-weight: bold;
 }
 
-.box{
+.box {
     @extend .text;
     display: flex;
-    justify-content: left;
-    align-items:start;
-    
-    width: 100px;
-    height: 100px;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 130px;
+    height: 130px;
     margin: 1px;
 }
 
 .base {
     background-color: var(--base-background-color);
 }
+
 .important {
     background-color: var(--important-background-color);
 }
+
 .warning {
     background-color: var(--warning-background-color);
 }
 
 .shadow {
-    box-shadow:var(--box-shadow);
+    box-shadow: var(--box-shadow);
 }
 
-.main-text{
-    font-family: var(--main-font);
+.main-text {
+    font-family: var(--main-font-family);
     padding: 5px;
 }
 
-.secondary-text{
-    font-family: var(--secondary-font);
+.secondary-text {
+    font-family: var(--secondary-font-family);
     padding: 5px;
 }

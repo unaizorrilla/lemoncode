@@ -1,6 +1,6 @@
 # Lemoncode Frontend Master
 
-Just the repository for mandatory exercises of *Lemoncode* Frontend master
+Just the repository for mandatory exercises of *Lemoncode Frontend Master*.
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ We are using two main tools to accomplish the modules execises.
 
 ### VS Code
 
-*VS Code* as our code editor, you can download and learn more [here](https://code.visualstudio.com/) 
+*VS Code* as our code editor, you can download and learn more [here](https://code.visualstudio.com/).
 
 
 ### Visual Studio Code Dev Containers
@@ -20,6 +20,6 @@ For more information about Dev Containers, and the extension installation please
 
 ## Exercises
 
-## Modules
+### Modules
 
 - [Layout-01](./01-layout/Readme.md)

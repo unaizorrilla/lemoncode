@@ -1,9 +1,7 @@
 @use "sass:color" as color;
 @use "sass:map" as map;
 
-/*
-We define a master color palette for each three containers and master font color
-*/
+// define master variables
 
 $master-color-palette: (
   1: #c80001,
@@ -13,17 +11,11 @@ $master-color-palette: (
 
 $master-font-color: #ffffff;
 
-/*
-We define a scale color function using a base color and percentage
-*/
+// create  the palette assets
 
 @function scale-color($base-color, $percentage, $direction: 1) {
   @return color.scale($base-color, $lightness: $percentage*$direction);
 }
-
-/*
-Define the palette
-*/
 
 .flex-style{
   display: flex;

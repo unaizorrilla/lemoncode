@@ -1,8 +1,14 @@
 :root{
+
+    /* Colors */
     --base-background-color:#e20a0a;
     --important-background-color:#782626;
     --warning-background-color:#b185a6; 
-    --main-font: 'times new roman', serif;
-    --secondary-font: 'comic sans ms', cursive;
+
+    /* Font Families */
+    --main-font-family: 'times new roman', serif;
+    --secondary-font-family: 'comic sans ms', cursive;
+
+    /* Effects */
     --box-shadow: -10px 10px 10px 4px rgba(0, 0, 0, 0.9);
 }
