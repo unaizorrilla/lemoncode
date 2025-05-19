@@ -36,7 +36,7 @@ Create a html page with *theme* support for some properties:
  - Border Radious
  - Shadow box
 
- ![alt text](./assets/theme.png)
+ ![Themes](./assets/theme.png)
 
  > The theme can be changed modifying the source code, not dynamically changed with js or any other method.
 
@@ -48,12 +48,20 @@ Create a html page with *theme* support for some properties:
  
  Similar to:
 
-  ![alt text](./assets/navbar-1.png.png)
+  ![Navbar small screens](./assets/navbar-1.png)
 
   for small screens and:
 
-  ![alt text](./assets/navbar-1.png.png)
+  ![NavBar regular screens](./assets/navbar-2.png)
 
   for regular size screens.
 
-   Review the [Readme](./exercise3/Readme.md) to see the instructions to run this exercise.
+Review the [Readme](./exercise3/Readme.md) to see the instructions to run this exercise.
+
+## Exercise 4
+
+Create a card element using **Grid CSS**. The card should be like:
+
+![Card](./assets/card.png)
+
+Review the [Readme](./exercise4/Readme.md) to see the instructions to run this exercise.

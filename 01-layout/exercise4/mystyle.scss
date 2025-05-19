@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.root {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 100dvh;
+}
+
