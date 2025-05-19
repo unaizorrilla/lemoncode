@@ -41,3 +41,19 @@ Create a html page with *theme* support for some properties:
  > The theme can be changed modifying the source code, not dynamically changed with js or any other method.
 
  Review the [Readme](./exercise2/Readme.md) to see the instructions to run this exercise.
+
+ ## Exercise 3
+
+ Create a responsible navigation bar using *Flexbox*. 
+ 
+ Similar to:
+
+  ![alt text](./assets/navbar-1.png.png)
+
+  for small screens and:
+
+  ![alt text](./assets/navbar-1.png.png)
+
+  for regular size screens.
+
+   Review the [Readme](./exercise3/Readme.md) to see the instructions to run this exercise.
