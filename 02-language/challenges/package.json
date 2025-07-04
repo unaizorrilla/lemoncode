@@ -1,0 +1,16 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "scripts": {
+    "transpile": "tsc --build",
+    "copy": "copyfiles --flat src/*.js transpilation",
+    "build": "npm run transpile && npm run copy"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "typescript": "^5.8.3"
+  }
+}

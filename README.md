@@ -23,3 +23,4 @@ For more information about Dev Containers, and the extension installation please
 ### Modules
 
 - [Layout-01](./01-layout/Readme.md)
+- [Language-02](./02-language/Readme.md)
