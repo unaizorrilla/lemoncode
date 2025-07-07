@@ -31,3 +31,15 @@ For execute the code, please run `node ./transpilation/tree.js` on the shell.
 ## Deep Access
 
 For execute the code, please run `node ./transpilation/deep-access.js` on the shell.
+
+
+## Memoization
+
+For execute the code, please run `node ./transpilation/memoize.js` on the shell.
+
+
+## Understanding
+
+
+For execute the code, please run `node ./transpilation/understanding.js` on the shell.
+
