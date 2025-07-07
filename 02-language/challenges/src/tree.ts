@@ -40,8 +40,6 @@ class TreeNode<TValue>{
     }
 }
 
-
-
 const root: TreeNode<string> = new TreeNode("Root");
 const child1: TreeNode<string> = new TreeNode("Child 1");
 const child2: TreeNode<string> = new TreeNode("Child 2");

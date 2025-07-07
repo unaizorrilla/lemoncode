@@ -1,3 +1,9 @@
+/*
+* In this exerciseI change a bit the requirement :-) hope you like it!
+* I change the Reel with only boolean values, so the reel can only be 0 or 1, 
+* with a collection of symbols that can be used to display the result.
+*/
+
 class Reel {
     #symbols = ['🍒', '🍋', '🍊', '🍉', '🍇', '🍓', '🍍', '🍏'];
     #currentPosition = 0;
@@ -39,7 +45,7 @@ class SlotMachine {
         // get the symbol for each reel
         const symbols = this.#reels.map(reel => reel.getCurrentSymbol());
 
-        // set is a specialized dictionary that only keeps unique values
+        // set is a specialized dictionary (SET) that only keeps unique values
         const uniqueSymbols = new Set(symbols);
 
         console.log(`| ${symbols.join(' | ')} |`);
@@ -50,9 +56,9 @@ class SlotMachine {
             winCoins = this.#coins;
             this.#coins = 0; // reset the coins;
 
-            console.log(`Congratulations!!! You won ${winCoins} coins!!`);
+            console.log(`Congratulations!!! You won ${winCoins} coins!!.`);
         } else {
-            console.log(`Good luck next time!`);
+            console.log(`Good luck next time!.`);
         }
 
         return {

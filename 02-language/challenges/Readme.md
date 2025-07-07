@@ -12,10 +12,7 @@ npm install
 
 # Run Challenges
 
-```bash
-npm run build
-```
-
+Before run any challenges please do a `npm run build` To transpile **ts** files:
 
 ## Console Traces
 
