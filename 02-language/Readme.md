@@ -9,4 +9,4 @@ Review the [Readme](./exercises/Readme.md) to see the instructions to run/test m
 
 ## Challenges
 
-Review the [Readme](./challenges/Readme.md) to see the instructions to run/test mandatory exercises
+Review the [Readme](./challenges/Readme.md) to see the instructions to run/test challenges.
