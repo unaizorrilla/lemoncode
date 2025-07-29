@@ -19,3 +19,8 @@ To run all test to validate the exercises you use `npm run test`. For specified 
  - 3 Clone & Merge `npm test clone.test`
  - 4 Read Books `npm test readbooks.test`
  - 5 Slot Machine `npm test slotmachine.test`
+
+
+ # Notes
+
+ > I do some changes on Slot Machine exercise, instead use reel with boolean I create a collection of symbols ( fruits ), i think this is more fun and interesting
