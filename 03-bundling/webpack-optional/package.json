@@ -2,7 +2,7 @@
   "name": "webpackstarter",
   "version": "1.0.0",
   "description": "Implement a simple application that:",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "build": "webpack --mode=production",
     "build:dev": "webpack --mode=development",
@@ -13,12 +13,16 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "dotenv-webpack": "^8.1.1",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
     "webpack": "^5.101.0",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   }

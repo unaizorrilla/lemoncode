@@ -31,6 +31,8 @@ Display a “hello world” developed with React.
 - Have a way to measure how much each library and our code take up in the bundle.
 
 
+Review the [Readme](./webpack-optional/Readme.md) to see the instructions to build and run 
+
 ## Vite
 
 ### Mandatory
