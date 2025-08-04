@@ -51,3 +51,6 @@ Set up a project seed with Vite that:
 ### Optional
 
 Add to the Vite project seed the necessary configuration so that, upon building, it also generates compressed files (GZIP and BROTLI). As a result, after running the build, the files dist/index.js.gz and dist/index.js.br should exist.
+
+
+Review the [Readme](./vite-mandatory+optional/Readme.md) to see the instructions to build and run 
