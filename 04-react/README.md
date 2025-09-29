@@ -13,7 +13,6 @@ And optional
 
 - Support for Material UI
 
-- D
 # Setup
 
 Open the code using the **Reopen in Container** feature from *Dev Containers extension* in **VS Code**
