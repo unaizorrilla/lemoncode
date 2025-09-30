@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { routes } from "@/router/routes";
 import type { GitHubMembers } from "@/api";
+import { List,ListItem,ListItemAvatar,ListItemText,Avatar, } from "@mui/material";
+
 
 interface ListProps {
     organization: string,
@@ -13,17 +15,19 @@ interface ListProps {
 export const ListComponent: React.FC<ListProps> = ({ members, organization, pageIndex }) => {
     return (
         <div>
-            <ul>
+            <List>
                 {members.map((item) => {
-                    return <li key={item.id}>
+                    return <ListItem key={item.id}>
+                        <ListItemAvatar><Avatar>👤</Avatar></ListItemAvatar>
+                        
                         <Link
                             to={routes.Detail(item.id)}
                             state={{ organization: organization, pageIndex: pageIndex }}>
-                            {item.login}
+                            <ListItemText primary= {item.login} />
                         </Link>
-                    </li>
+                    </ListItem>
                 })}
-            </ul>
+            </List>
         </div>
     );
 }

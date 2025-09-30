@@ -6,7 +6,10 @@ export const AppLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
             <div className="layout-app-container">
                 <div className="layout-app-header">[username]
                 </div>
-                {children}
+                <div className="layout-app-content">
+                    {children}
+                </div>
+                
             </div>
         </>);
 }

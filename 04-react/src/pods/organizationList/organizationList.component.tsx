@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { InputOrganizationComponent } from "./components/input.component";
 import { ListComponent } from "./components/list.component";
 import { PaginationComponent } from "./components/pagination.component";
@@ -14,30 +15,35 @@ interface OrganizationListProps {
     onOrganizationChange: (org: string) => void;
 }
 
-export const OrganizationListComponent: React.FC<OrganizationListProps> = ({ 
-    organization, 
-    members, 
-    currentPage, 
-    totalPages, 
-    onPageChange, 
+export const OrganizationListComponent: React.FC<OrganizationListProps> = ({
+    organization,
+    members,
+    currentPage,
+    totalPages,
+    onPageChange,
     onOrganizationChange,
     isLoading,
-    error 
+    error
 }) => {
     return (
         <>
-            <h1>Organization List Container</h1>
-            <InputOrganizationComponent onOrganizationChange={onOrganizationChange} organization={organization}/>
-            
+            <Typography variant="h4" component="h1" gutterBottom>
+                Organization List
+            </Typography>
+
+            <InputOrganizationComponent onOrganizationChange={onOrganizationChange} organization={organization} />
+
             {error && (
-                <div style={{ color: 'red', padding: '10px', backgroundColor: '#ffe6e6', border: '1px solid #ffcccc', borderRadius: '4px', margin: '10px 0' }}>
+                <div className="error">
                     <strong>Error:</strong> {error}
                 </div>
             )}
-            
+
             {isLoading ? (
-                <div style={{ padding: '20px', textAlign: 'center' }}>
-                    Loading organization members...
+                <div className="loading">
+                    <Typography variant="body1">
+                        Loading organization members...
+                    </Typography>
                 </div>
             ) : (
                 <>

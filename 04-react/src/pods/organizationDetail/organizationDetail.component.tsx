@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import type { GitHubMember } from '@/api';
+import Typography from '@mui/material/Typography';
+import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton } from '@mui/material';
+import { red } from '@mui/material/colors';
 
 interface Props {
     user: GitHubMember | null;
@@ -14,48 +17,57 @@ interface Props {
 export const OrganizationDetailComponent: React.FC<Props> = ({ user, organization, pageIndex, isLoading, error }) => {
     return (
         <>
-
-            <h1>Organization User Detail</h1>
+            <Typography variant="h4" component="h1" gutterBottom>
+                Organization User Detail
+            </Typography>
 
             {error && (
-                <div style={{ color: 'red', padding: '10px', backgroundColor: '#ffe6e6', border: '1px solid #ffcccc', borderRadius: '4px', margin: '10px 0' }}>
+                <div className="error">
                     <strong>Error:</strong> {error}
                 </div>
             )}
 
             {isLoading ? (
-                <div style={{ padding: '20px', textAlign: 'center' }}>
+                <div className='loading'>
                     Loading user data...
                 </div>
             ) : (
                 <>
-                    <div>{user ? user.login : 'Loading...'}</div>
-                    <div>{user ? user.id : ''}</div>
-                    <div>{user ? user.node_id : ''}</div>
-                    <div>{user ? <img src={user.avatar_url} alt="avatar" width={50} /> : ''}</div>
-                    <div>{user ? user.url : ''}</div>
-                    <div>{user ? user.html_url : ''}</div>
-                    <div>{user ? user.followers_url : ''}</div>
-                    <div>{user ? user.following_url : ''}</div>
-                    <div>{user ? user.gists_url : ''}</div>
-                    <div>{user ? user.starred_url : ''}</div>
-                    <div>{user ? user.subscriptions_url : ''}</div>
-                    <div>{user ? user.organizations_url : ''}</div>
-                    <div>{user ? user.repos_url : ''}</div>
-                    <div>{user ? user.events_url : ''}</div>
-                    <div>{user ? user.received_events_url : ''}</div>
-                    <div>{user ? user.type : ''}</div>
-                    <div>{user ? user.user_view_type : ''}</div>
-                    <div>{user ? user.site_admin.toString() : ''}</div>
+                    <Card sx={{ maxWidth: 345 }}>
+                        <CardHeader>
+                            avatar={
+                                <Avatar sx={{ bgcolor: red[500] }} aria-label="ccc">
+                                    Rdd
+                                </Avatar>
+                            }
+                            title="User Info"
+                        </CardHeader>
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={user?.avatar_url}
+                            alt="User Avatar"
+                        />
+                        <CardContent>
+                            <Typography variant="h5" component="div">
+                                login:  {user ? user.login : 'Loading...'}
+                            </Typography>
 
-                    <Link
-                        to="/organization"
-                        state={{ organization: organization, pageIndex: pageIndex }}
-                    >
-                        Back to list page
-                    </Link>
+                        </CardContent>
+                        <CardActions disableSpacing>
+                            <IconButton aria-label="bacl to list">
+                                <Link
+                                    to="/organization"
+                                    state={{ organization: organization, pageIndex: pageIndex }}
+                                >
+                                    Back to list page
+                                </Link>
+                            </IconButton>
+                        </CardActions>
+                    </Card>
                 </>
-            )}
+            )
+            }
         </>
     );
 }
