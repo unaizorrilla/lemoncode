@@ -5,7 +5,6 @@ import { routes } from "@/router/routes";
 import type { GitHubMembers } from "@/api";
 import { List,ListItem,ListItemAvatar,ListItemText,Avatar, } from "@mui/material";
 
-
 interface ListProps {
     organization: string,
     members: GitHubMembers

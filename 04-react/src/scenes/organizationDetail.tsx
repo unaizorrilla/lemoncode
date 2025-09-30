@@ -9,5 +9,4 @@ export const OrganizationDetail: React.FC = () => {
                <OrganizationDetailContainer />
             </AppLayout>
         </>);
-
 }

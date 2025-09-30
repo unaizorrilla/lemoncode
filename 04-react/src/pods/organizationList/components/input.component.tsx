@@ -3,17 +3,16 @@ import React from "react";
 import Autocomplete from '@mui/material/Autocomplete';
 import { TextField, Button } from "@mui/material";
 
-
 interface InputOrganizationComponentProps {
     organization: string;
     onOrganizationChange: (org: string) => void;
 }
+
 export const InputOrganizationComponent: React.FC<InputOrganizationComponentProps> = ({ organization, onOrganizationChange }) => {
 
     const [org, setOrg] = React.useState(organization);
     
     return (
-        
             <div className="input-organization">
 
                 <Autocomplete
@@ -30,7 +29,6 @@ export const InputOrganizationComponent: React.FC<InputOrganizationComponentProp
                     } />
 
                 <Button variant="contained" onClick={() => onOrganizationChange(org)}>Search</Button>
-
             </div>
         );
 }
