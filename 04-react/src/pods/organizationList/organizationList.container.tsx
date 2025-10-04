@@ -1,22 +1,23 @@
 import React from 'react';
 
-import { useNavigationState } from './hooks/useNavigationState';
 import { usePagination } from './hooks/usePagination';
 import { useGitHub } from './hooks/useGitHub';
+import { organizationContext } from '@/context';
 
 import { OrganizationListComponent } from './organizationList.component';
 
 
 export const OrganizationListContainer: React.FC = () => {
-    
-    const { initialOrganization, initialPageIndex } = useNavigationState();
-    const [organization, setOrganization] = React.useState(initialOrganization);
 
+    const { organization, setOrganization, setPageIndex } = React.useContext(organizationContext);
     const { githubMembers, isLoading, error } = useGitHub(organization);
-    const { paginatedMembers, currentPage, totalPages, handlePageChange } = usePagination({ initialPage: initialPageIndex, data: githubMembers });
+    const { paginatedMembers, currentPage, totalPages, handlePageChange } = usePagination({ data: githubMembers });
 
     const onOrganizationChange = (org: string) => {
+        
+        // reset to new organization and first page
         setOrganization(org);
+        setPageIndex(1);
         handlePageChange(1);
     }
 

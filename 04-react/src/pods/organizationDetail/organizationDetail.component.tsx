@@ -7,14 +7,12 @@ import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, IconButt
 import { red } from '@mui/material/colors';
 
 interface Props {
-    user: GitHubMember | null;
-    organization?: string,
-    pageIndex: number,
+    user: GitHubMember | null,
     isLoading: boolean,
     error?: string | null
 }
 
-export const OrganizationDetailComponent: React.FC<Props> = ({ user, organization, pageIndex, isLoading, error }) => {
+export const OrganizationDetailComponent: React.FC<Props> = ({ user, isLoading, error }) => {
     return (
         <>
             <Typography variant="h4" component="h1" gutterBottom>
@@ -58,7 +56,6 @@ export const OrganizationDetailComponent: React.FC<Props> = ({ user, organizatio
                             <IconButton aria-label="bacl to list">
                                 <Link
                                     to="/organization"
-                                    state={{ organization: organization, pageIndex: pageIndex }}
                                 >
                                     Back to list page
                                 </Link>

@@ -1,27 +1,27 @@
 import React from 'react';
 import type { GitHubMembers } from '@/api';
+import { organizationContext } from '@/context';
 
-export const  usePagination = (params: { initialPage: number, data: GitHubMembers }) => {
+export const  usePagination = (params: { data: GitHubMembers }) => {
     const pageSize = 5;
 
-    const { initialPage, data } = params;
-    const [currentPage, setCurrentPage] = React.useState(initialPage);
-
-    const paginatedMembers = data.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+    const {  data } = params;
+    const { pageIndex, setPageIndex } = React.useContext(organizationContext);
+    const paginatedMembers = data.slice((pageIndex - 1) * pageSize, pageIndex * pageSize);
     const totalPages = Math.ceil(data.length / pageSize);
 
     const handlePageChange = (page: number) => {
 
-        if (page < 1 || page === currentPage || page > totalPages) {
+        if (page < 1 || page === pageIndex || page > totalPages) {
             return;
         }
 
-        setCurrentPage(page);
+        setPageIndex(page);
     }
 
     return {
         paginatedMembers,
-        currentPage,
+        currentPage: pageIndex,
         totalPages,
         handlePageChange
     }

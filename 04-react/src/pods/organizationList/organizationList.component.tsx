@@ -47,7 +47,7 @@ export const OrganizationListComponent: React.FC<OrganizationListProps> = ({
                 </div>
             ) : (
                 <>
-                    <ListComponent members={members} organization={organization} pageIndex={currentPage} />
+                    <ListComponent members={members} />
                     <PaginationComponent
                         currentPage={currentPage}
                         totalPages={totalPages}

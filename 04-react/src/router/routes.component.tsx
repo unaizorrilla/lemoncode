@@ -1,19 +1,14 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router';
 
-import { Organization } from '@/scenes/organization';
-import { OrganizationDetail } from '@/scenes/organizationDetail';
-import { BrowserRouter, Routes, Route  } from 'react-router';
-
-import { switchRoutes } from './routes';
+import {OrganizationGroup} from './organization/routes.organization'
 
 export const Router: React.FC = () => {
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route index element={<Organization />} />
-                    <Route path={switchRoutes.List} element={<Organization />} />
-                    <Route path={switchRoutes.Detail} element={<OrganizationDetail />} />
+                    <Route path="/*" element={<OrganizationGroup />} />
                 </Routes>
             </BrowserRouter>
         </>
