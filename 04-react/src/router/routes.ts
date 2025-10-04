@@ -9,7 +9,6 @@ interface Routes extends Omit<SwitchRoutes, 'Detail'>{
     Detail: (userId: number) => string
 }
 
-
 export const switchRoutes :  SwitchRoutes  = {
     List: '/organization',
     Detail: '/organization/detail/:userId'
