@@ -1,4 +1,4 @@
-# React 04
+# Angular 05
 
 This contains all the files to complete the mandatory lab for module Angular 05:
 
@@ -25,10 +25,10 @@ npm install
 
 # Run 
 
-To run the Webpack optional exercise please follow the command:
+To run  please follow the command:
 
 ```bash
-npm run start
+ng serve
 ```
 
 And open the url from the output `http://localhost:4200`

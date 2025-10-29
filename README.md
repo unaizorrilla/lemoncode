@@ -24,5 +24,6 @@ For more information about Dev Containers, and the extension installation please
 
 - [Layout-01](./01-layout/Readme.md)
 - [Language-02](./02-language/Readme.md)
-- [Language-03](./03-bundling/Readme.md)
-- [Language-04](./04-react/Readme.md)
+- [Bundling-03](./03-bundling/Readme.md)
+- [React-04](./04-react/Readme.md)
+- [Angular-05](./05-angular/Readme.md)
