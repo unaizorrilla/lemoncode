@@ -1,0 +1,35 @@
+<mat-toolbar color="secondary">
+	<button matIconButton aria-label="Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span> 
+    <a matButton routerLink="/home">
+      @if(isLoggedIn()){
+        <strong>Welcome, {{ getUsername() }}</strong>
+      } @else {
+        Lemoncode Angular Lab
+      }
+    </a> 
+  </span>
+  <div class="menu">
+    @if(isLoggedIn()) {
+      <div><a matButton routerLink="/dashboard">Dashboard</a></div>
+      <span> | </span>
+      <div><a matButton routerLink="/crud">Crud</a></div>
+      <span> | </span>
+      <div><a matButton routerLink="/gallery">Gallery</a></div>
+      <span> | </span>
+      <div><a matButton routerLink="/profile">Profile</a></div>
+      <span> | </span>
+      <div><a matButton routerLink="/logout">Logout</a></div>
+    }
+    @else{
+      <div><a matButton routerLink="/home">Home</a></div>
+      <span> | </span>
+      <div><a matButton routerLink="/about">About</a></div>
+      <span> | </span>
+      <div><a matButton routerLink="/login">Login</a></div>
+    }
+      
+  </div>
+</mat-toolbar>

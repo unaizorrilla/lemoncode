@@ -1,0 +1,48 @@
+<div class="box">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+            <mat-card-title>Authentication</mat-card-title>
+            <mat-card-subtitle>We are testing a fake authentication.</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                This is a simple login page to test authentication in Angular using
+                route guards and services.</p>
+            <p>
+                Use <strong>master@lemoncode.net</strong> as username and <strong>12345678</strong> as password to log in.
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <div  class="form">
+        <form [formGroup]="logInFormGroup" (ngSubmit)="handleLogin()">
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput type="email" formControlName="login" />
+                        <mat-error *ngIf="logInFormGroup.get('login')?.hasError('required')">
+                            Username is <strong>required and must be a valid email.</strong>
+                        </mat-error>
+                        <mat-error *ngIf="logInFormGroup.get('login')?.hasError('email') && !logInFormGroup.get('login')?.hasError('required')">
+                            Please enter a <strong>valid email address</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" />
+                    <mat-error *ngIf="logInFormGroup.get('password')?.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" [disabled]="logInFormGroup.invalid" type="submit">Log In</button>
+                <mat-error *ngIf="!validAuthentication">
+                        Invalid username or password.
+                </mat-error>
+            </div>
+        </form>
+    </div>
+</div>
