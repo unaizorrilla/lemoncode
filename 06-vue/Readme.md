@@ -1,15 +1,14 @@
-# Angular 05
+# Vue 06
 
-This contains all the files to complete the mandatory lab for module Angular 05:
+This contains all the files to complete the mandatory lab for module Vue 06:
 
 Implement a simple application that:
 
-- Use a Layout components.
-- Implement Routing.
-- Use Angular Material.
-- Use a service with state for login/logout.
+- Use Components and Layout
+- Implement a form for add meals
+- Implement a list of meals for a week and a list of favourites
+- Use some CSS library like Tailwind
 
-Basically is something like [Model Sample](https://carherco.es/curso-angular-ejercicio-final)
 
 # Setup
 
@@ -28,18 +27,21 @@ npm install
 To run  please follow the command:
 
 ```bash
-ng serve
+npm run dev
 ```
 
-And open the url from the output `http://localhost:4200`
+And open the url from the output `http://localhost:5173`
 
 
 ```bash
-> ng serve
+> npm run dev
 
-Watch mode enabled. Watching for file changes...
-NOTE: Raw file sizes do not reflect development server per-request transformations.
-  ➜  Local:   http://localhost:4200/
+ VITE v7.2.2  ready in 247 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
   ➜  press h + enter to show help
 
 ```
