@@ -27,3 +27,4 @@ For more information about Dev Containers, and the extension installation please
 - [Bundling-03](./03-bundling/Readme.md)
 - [React-04](./04-react/Readme.md)
 - [Angular-05](./05-angular/Readme.md)
+- [Vue-06](./06-vue/Readme.md)
