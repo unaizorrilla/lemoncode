@@ -1,9 +1,9 @@
 
-# Metaframeworks NextJs
+# Metaframeworks Nuxt
 
 This contains all the files to complete the mandatory lab for module of Metaframeworks.
 
-We implemented a sample of Nuxt app with next features:
+We implemented a sample of Nuxt app with Nuxt features:
 
  - Dynamic SSR
  - Showing ISR with revalidate
