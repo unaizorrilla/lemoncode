@@ -28,3 +28,5 @@ For more information about Dev Containers, and the extension installation please
 - [React-04](./04-react/Readme.md)
 - [Angular-05](./05-angular/Readme.md)
 - [Vue-06](./06-vue/Readme.md)
+- [Meta-NextJs-07](./07-meta-nextjs/Readme.md)
+- [Meta-Nuxt-07](./07-meta-nuxt/Readme.md)
