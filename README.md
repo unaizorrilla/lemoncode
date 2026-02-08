@@ -30,3 +30,4 @@ For more information about Dev Containers, and the extension installation please
 - [Vue-06](./06-vue/Readme.md)
 - [Meta-NextJs-07](./07-meta-nextjs/Readme.md)
 - [Meta-Nuxt-07](./07-meta-nuxt/Readme.md)
+- [Testing-08](./08-testing/Readme.md)
